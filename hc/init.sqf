@@ -8,12 +8,12 @@ if (!isServer && !hasInterface) then
 	dayz_maxGlobalZombiesIncrease = 40;
 	dayz_maxZeds = 2000;
 	
-	call compile preprocessFileLineNumbers "compiles.sqf";
-	call compile preprocessFileLineNumbers "system\HCsignals.sqf"; // passing signals;
-	call compile preprocessFileLineNumbers "system\handle_HCdo_spawnRCV.sqf";
+	call compile preprocessFileLineNumbers "hc\compiles.sqf";
+	call compile preprocessFileLineNumbers "hc\system\HCsignals.sqf"; // passing signals;
+	call compile preprocessFileLineNumbers "hc\system\handle_HCdo_spawnRCV.sqf";
 };
 
 if (isServer) then
 {
-	call compile preprocessFileLineNumbers "system\HCsignals.sqf"; // passing signals;
+	call compile preprocessFileLineNumbers "hc\system\HCsignals.sqf"; // passing signals;
 };
