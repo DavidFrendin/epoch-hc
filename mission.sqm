@@ -1,0 +1,70 @@
+/*
+	Installation instructions
+	//<-- marks changes
+*/
+class Mission
+{
+	class Groups
+	{
+		items=3; //<--
+		class Item0
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=100;
+				class Item0
+				{
+					position[]={12547.952,213.96292,-5866.5972};
+					azimut=-17.0839;
+					id=11;
+					side="WEST";
+					vehicle="Survivor1_DZ";
+					player="PLAY CDG";
+					skill=0.60000002;
+					init="this enableSimulation false;this allowDammage false;this disableAI 'FSM';this disableAI 'ANIM';this disableAI 'MOVE';";
+				};
+			};
+		};
+		class Item1
+		{
+			side="LOGIC";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={8810.7705,138.52499,11751.518};
+					id=50;
+					side="LOGIC";
+					vehicle="FunctionsManager";
+					leader=1;
+					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item2 //<--
+		{
+			side="CIV";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={4078.8516,30.836605,4757.7241};
+					id=0;
+					side="CIV";
+					vehicle="Survivor1_DZ";
+					player="PLAYER COMMANDER";
+					skill=0.60000002;
+					text="Server";
+					init="this allowDamage false";
+					description="Server";
+					name="Server";
+					forceHeadlessClient=1;
+				};
+			};
+		};
+	};
+};
