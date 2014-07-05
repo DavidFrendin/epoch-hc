@@ -10,10 +10,10 @@ _age = -1;
 _radius = 200; 
 _position = getPosATL player;
 
-missionNamespace setvariable ["HCrequest_spawn",
+missionNamespace setvariable ["PV_HCRequest_spawn",
 		[ _type, _inVehicle, _onTheMove, _dateNow, _maxWildZombies, _age, _radius, _position, player]];
-hint "calling pVS HCrequest_spawn";	
-publicVariableServer "HCrequest_spawn"; // target specific HC
+hint "calling pVS PV_HCRequest_spawn";	
+publicVariableServer "PV_HCRequest_spawn"; // target specific HC
 // worst case is that selected HC has gone offline in the last few moments, so no spawn
 
 // experiment with adding fly sounds locally for both zombies and players.

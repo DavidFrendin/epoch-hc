@@ -1,5 +1,7 @@
 if (!isServer && !hasInterface) then
 {
+	diag_log "EHC: Initializing";
+	
 	/*
 		Settings
 	*/
@@ -9,11 +11,11 @@ if (!isServer && !hasInterface) then
 	dayz_maxZeds = 2000;
 	
 	call compile preprocessFileLineNumbers "hc\compiles.sqf";
-	call compile preprocessFileLineNumbers "hc\system\HCsignals.sqf"; // passing signals;
-	call compile preprocessFileLineNumbers "hc\system\handle_HCdo_spawnRCV.sqf";
+	call compile preprocessFileLineNumbers "hc\headless_client\handlers.sqf";
+	call compile preprocessFileLineNumbers "hc\headless_client\heartbeat.sqf";
 };
 
 if (isServer) then
 {
-	call compile preprocessFileLineNumbers "hc\system\HCsignals.sqf"; // passing signals;
+	call compile preprocessFileLineNumbers "hc\server\handlers.sqf"; // passing signals;
 };

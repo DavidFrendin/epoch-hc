@@ -1,0 +1,1 @@
+call compile preprocessFileLineNumbers "hc\headless_client\pv_hcspawnstuff.sqf";
