@@ -12,7 +12,6 @@ if (isNil "PV_HCList") then {PV_HCList =[];}; // list of available HCs for serve
 	private ["_val", "_found", "_holder"];
 	
 	_val = owner (_this select 1); // owner of HC broadcast
-	diag_log "EHC: Recieved heartbeat from " + str _val;
 	
 	_found = false; // track whether owner is found in HClist
 	_holder = + PV_HCList; // work on a copy in case of overlapping call
@@ -26,7 +25,7 @@ if (isNil "PV_HCList") then {PV_HCList =[];}; // list of available HCs for serve
 	if (!_found) then
 	{ // if HC not found in the array, then add it
 		_holder set [count _holder, [ _val, floor time ]]; // new ID added to PV_HCList
-		diag_log "added HC:" + str _val;
+		diag_log "EHC: Added HC to list " + str _val;
 	};
 	PV_HCList = + _holder; // changed copy is presented
 };
