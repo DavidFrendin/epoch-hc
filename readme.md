@@ -13,45 +13,45 @@ Installation
 --------------------------
 Battleye configuration
 Add the following exceptions to publicvariable.txt
-!="PV_HCRequest_spawn" !="PV_HCHeartbeat" !="PV_HCList" !="PV_HCDo_spawn" !="PV_HCRequest_spawn"
+`!="PV_HCRequest_spawn" !="PV_HCHeartbeat" !="PV_HCList" !="PV_HCDo_spawn" !="PV_HCRequest_spawn"`
 
 Add the following to the server configuration cfg file:
-localclient[] = {"127.0.0.1"};
+`localclient[] = {"127.0.0.1"};`
 
 Edit the mission.sqf file, in the Groups class, change items to items=3.
 
 After the class Item1 ends "};", add the following:
 
- class Item2 //<--
- {
- 	side="CIV";
- 	class Vehicles
- 	{
- 		items=1;
- 		class Item0
- 		{
- 			position[]={4078.8516,30.836605,4757.7241};
- 			id=0;
- 			side="CIV";
- 			vehicle="Survivor1_DZ";
- 			player="PLAYER COMMANDER";
- 			skill=0.60000002;
- 			text="Server";
- 			init="this allowDamage false";
- 			description="Server";
- 			name="Server";
- 			forceHeadlessClient=1;
- 		};
- 	};
- };
+    class Item2 //<--
+    {
+    	side="CIV";
+    	class Vehicles
+    	{
+    		items=1;
+    		class Item0
+    		{
+    			position[]={4078.8516,30.836605,4757.7241};
+    			id=0;
+    			side="CIV";
+    			vehicle="Survivor1_DZ";
+    			player="PLAYER COMMANDER";
+    			skill=0.60000002;
+    			text="Server";
+    			init="this allowDamage false";
+    			description="Server";
+    			name="Server";
+    			forceHeadlessClient=1;
+    		};
+    	};
+    };
 
 In the init.sqf file, add the following to the bottom of the file:
- [] execVM "hc\init.sqf";
+`[] execVM "hc\init.sqf";`
  
 Copy the hc directory from this repository and put it in your mission file.
 
 Lastly, to start the headless client use the following command line:
- arma2oa_be.exe 0 0 -skipintro -nosplash -noPause -client -connect 127.0.0.1 -port:2302 -nosound "-mod=@dayz_epoch" -cpuCount=2 -name=HeadlessClient -profiles=HeadlessClient
+`arma2oa_be.exe 0 0 -skipintro -nosplash -noPause -client -connect 127.0.0.1 -port:2302 -nosound "-mod=@dayz_epoch" -cpuCount=2 -name=HeadlessClient -profiles=HeadlessClient`
 
 
 --------------------------
