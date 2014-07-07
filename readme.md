@@ -58,6 +58,7 @@ Lastly, to start the headless client use the following command line:
 Credits
 --------------------------
 * Goober - Initial source - http://epochmod.com/forum/index.php?/topic/6329-working-dayz-epoch-headless-client-for-zed-spawn-and-fsm/
+* TayTayTheKiller - Collaborator - http://epochmod.com/forum/index.php?/user/44-taytaythekiller/
 
 
 --------------------------
