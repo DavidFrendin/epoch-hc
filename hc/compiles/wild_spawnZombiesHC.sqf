@@ -40,20 +40,32 @@ _agent setVariable ["myDest",_myDest];
 _agent setVariable ["newDest",_newDest];
 
 //Add some loot
+_loot = "";
+_array = [];
 _rnd = random 1;
-if (_rnd > 0.3) then {
-	_lootType = 		configFile >> "CfgVehicles" >> _type >> "zombieLoot";
+if (_rnd < 0.2) then {
+	_lootType = configFile >> "CfgVehicles" >> _type >> "zombieLoot";
 	if (isText _lootType) then {
-		_array = []+ getArray (configFile >> "cfgLoot" >> getText(_lootType));
+		_array = [];
+		{
+			_array set [count _array, _x select 0]
+		} count getArray (configFile >> "cfgLoot" >> getText(_lootType));
 		if (count _array > 0) then {
-			_loot = _array call BIS_fnc_selectRandomWeighted;
+			_index = dayz_CLBase find getText(_lootType);
+			_weights = dayz_CLChances select _index;
+			_loot = _array select (_weights select (floor(random (count _weights))));
 			if(!isNil "_array") then {
+				_loot_count =   getNumber(configFile >> "CfgMagazines" >> _loot >> "count");
+				if(_loot_count>1) then {
+					_agent addMagazine [_loot, ceil(random _loot_count)];
+				} else {
 				_agent addMagazine _loot;
+				};
 			};
 		};
 	};
 };
-
+	
 //Start behavior
 _id = [_position,_agent] execFSM "hc\compiles\zombie_agentHC.fsm";
 hint "fsm id:" + str _id;
