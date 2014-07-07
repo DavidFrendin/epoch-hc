@@ -1,4 +1,3 @@
-player_spawn_2 = compile preprocessFileLineNumbers "hc\fixes\player_spawn_2.sqf";
 nearest_player = compile preprocessFileLineNumbers "hc\compiles\nearest_player.sqf";
 zombie_loiterHC = compile preprocessFileLineNumbers "hc\compiles\zombie_loiterHC.sqf";
 zombie_generateHC = compile preprocessFileLineNumbers "hc\compiles\zombie_generateHC.sqf";
