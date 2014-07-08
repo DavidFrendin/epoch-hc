@@ -1,14 +1,11 @@
+/*
+	Main entry point, should be called from mission.sqf
+*/
 if (!isServer && !hasInterface) then
 {
 	diag_log "EHC: Initializing";
 	
-	/*
-		Settings
-	*/
-	dayz_maxLocalZombies = 160; // Default = 40
-	dayz_maxGlobalZombiesInit = 160;
-	dayz_maxGlobalZombiesIncrease = 40;
-	dayz_maxZeds = 2000;
+	#include "settings.sqf"
 	
 	call compile preprocessFileLineNumbers "hc\compiles.sqf";
 	call compile preprocessFileLineNumbers "hc\headless_client\handlers.sqf";
