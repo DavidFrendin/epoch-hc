@@ -15,6 +15,9 @@ Battleye configuration
 Add the following exceptions to publicvariable.txt
 `!="PV_HCRequest_spawn" !="PV_HCHeartbeat" !="PV_HCList" !="PV_HCDo_spawn" !="PV_HCRequest_spawn"`
 
+Add the following to line to scripts.txt
+`5 "I_AM_A_BAD_HC_IN_WRONG_SLOT"`
+
 Add the following to the server configuration cfg file:
 `localclient[] = {"127.0.0.1"};`
 
