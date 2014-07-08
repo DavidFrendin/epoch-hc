@@ -1,4 +1,4 @@
-**Epoch Headless Client**
+**Epoch Headless Client EHC**
 ================
 
 --------------------------
@@ -51,21 +51,28 @@ In the init.sqf file, add the following to the bottom of the file:
 Copy the hc directory from this repository and put it in your mission file.
 
 Lastly, to start the headless client use the following command line:
-`arma2oa_be.exe 0 0 -skipintro -nosplash -noPause -client -connect 127.0.0.1 -port:2302 -nosound "-mod=@dayz_epoch" -cpuCount=2 -name=HeadlessClient -profiles=HeadlessClient`
+    arma2oa_be.exe 0 0 -skipintro -nosplash -noPause -client -connect 127.0.0.1 -port:2302 -nosound "-mod=@dayz_epoch" -cpuCount=2 -name=Server -profiles=HeadlessClient
 
 
 --------------------------
 Credits
 --------------------------
-* Goober - Initial source - http://epochmod.com/forum/index.php?/topic/6329-working-dayz-epoch-headless-client-for-zed-spawn-and-fsm/
-* TayTayTheKiller - Collaborator - http://epochmod.com/forum/index.php?/user/44-taytaythekiller/
+* Goober
+  * Initial source
+  * http://epochmod.com/forum/index.php?/topic/6329-working-dayz-epoch-headless-client-for-zed-spawn-and-fsm/
+* David
+  * Developer
+  * http://epochmod.com/forum/index.php?/user/15375-david/
+* TayTayTheKiller
+  * Collaborator
+  * http://epochmod.com/forum/index.php?/user/44-taytaythekiller/
 
 
 --------------------------
 Status
 --------------------------
-Current version: Alpha (aka. "development hell")
+Current version: 1.1 RC
 
-The master branch is development branch as there have yet to be a stable release. Commits may break code.
+This is experimental and not yet intended for live use.
 
-This is experimental and not yet intended for live use. Use at your own risk.
+Use at your own risk.
