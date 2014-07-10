@@ -18,7 +18,7 @@ Add the following exceptions to publicvariable.txt
 Add the following to the server configuration cfg file:
 `localclient[] = {"127.0.0.1"};`
 
-Edit the mission.sqf file, in the Groups class, change items to items=3.
+Edit the mission.sqm file, in the Groups class, change items to items=3.
 
 After the class Item1 ends "};", add the following:
 
@@ -51,7 +51,7 @@ In the init.sqf file, add the following to the bottom of the file:
 Copy the hc directory from this repository and put it in your mission file.
 
 Lastly, to start the headless client use the following command line:
-    arma2oa_be.exe 0 0 -skipintro -nosplash -noPause -client -connect 127.0.0.1 -port:2302 -nosound "-mod=@dayz_epoch" -cpuCount=2 -name=Server -profiles=HeadlessClient
+    arma2oa_be.exe 0 0 -skipintro -nosplash -noPause -client -connect 127.0.0.1 -port:2302 -nosound "-mod=@dayz_epoch" -cpuCount=2 -name=Server -profile=HeadlessClient
 
 
 --------------------------
